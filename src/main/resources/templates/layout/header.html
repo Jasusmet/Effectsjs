@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>EffectsJS</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 <header class="header">
@@ -12,25 +13,9 @@
             <div class="row">
                 <div class="header__top_left">
                     <ul>
-                        <li><i class="fa fa-envelope"></i> effectsjsproyect@gmail.com </li>
+                        <li><i class="fa fa-envelope"></i> effectsjsproject@gmail.com </li>
                     </ul>
                 </div>
-                <nav>
-                    <div class="logo">
-                        <a href="/">Logo EffectsJS</a>
-                    </div>
-                    <ul class="nav-links">
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="about.html">Sobre nosotros</a></li>
-                        <li><a href="services.html">Servicios</a></li>
-                        <li><a href="contect.html">Contacto</a></li>
-                    </ul>
-                    <div class="burger">
-                        <div class="line1>"></div>
-                        <div class="line2>"></div>
-                        <div class="line3>"></div>
-                    </div>
-                </nav>
                 <div class="header__top_right">
                     <div class="header__top__right__social">
                         <a href="https://github.com/Jasusmet"><i class="fa-brands fa-github"></i></a>
@@ -38,12 +23,39 @@
                         <a href="https://www.linkedin.com/in/jes%C3%BAs-clemente-p%C3%A9rez/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.linkedin.com/in/franciscovillalbarold%C3%A1n/"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
+                    <div class="header__top__right__language">
+                        <img src="/img/language.png" alt="">
+                        <div th:text="#{language}">Español</div>
+                        <span class="arrow_down"></span>
+                        <ul>
+                            <li><a href="?lang=es" th:text="#{spanish}">Español</a></li>
+                            <li><a href="?lang=en" th:text="#{english}">English</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__top_right_auth">
+                        <a href="/login"><i class="fa fa-user"></i><span th:text="#{login.submit}">Iniciar sesión</span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="header__logo">
+                <a href="/"><img src="/img/logo.png" height="100px" width="100px" alt=""></a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="about.html" th:text="#{about.us}">Sobre nosotros</a></li>
+                    <li><a href="services.html" th:text="#{services}">Servicios</a></li>
+                    <li><a href="contact.html" th:text="#{contact}">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu__movil__open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
 </header>
-
-<script src="script.js"></script>
 </body>
 </html>

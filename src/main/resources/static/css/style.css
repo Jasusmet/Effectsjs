@@ -1,12 +1,80 @@
 body {
+    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    transition: all 1.5s ease;
 }
 
-header {
+img {
+    max-width: 100%;
+}
+
+/*---------------------
+  Header
+-----------------------*/
+
+.header__top {
     background: #333;
     color: #fff;
-    padding: 1em 0;
+    padding: 10px 0 13px;
+}
+
+.header__top__left {
+    padding: 10px 0 13px;
+}
+
+.header__top__left ul li {
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    margin-right: 45px;
+    position: relative;
+}
+
+.header__top__right__language img {
+    margin-right: 6px;
+}
+
+.header__top__right__language div {
+    font-size: 14px;
+    color: #1c1c1c;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.header__top__right__language span {
+    font-size: 14px;
+    color: #1c1c1c;
+    position: relative;
+    top: 2px;
+}
+
+.header__top__right__language ul {
+    background: #222222;
+    width: 100px;
+    text-align: left;
+    padding: 5px 0;
+    position: absolute;
+    left: 0;
+    top: 43px;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -ms-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+}
+
+.header__top__right__language ul li {
+    list-style: none;
+}
+
+.header__top__right__language ul li a {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 5px 10px;
 }
 
 nav {
